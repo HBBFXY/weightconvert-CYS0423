@@ -1,5 +1,4 @@
-
-    input_str = input().strip()
+input_str = input().strip()
 value = float(input_str[:-2])
 unit = input_str[-2:]
 
