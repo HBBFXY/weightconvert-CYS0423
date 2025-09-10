@@ -11,4 +11,3 @@ elif unit == 'pd':
     print(f"对应的公制重量为{result:.3f}公斤")
 else:
     print("输入格式错误，请使用'kg'或'pd'作为单位")
-    
