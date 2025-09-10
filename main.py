@@ -1,18 +1,12 @@
-# 获取用户输入
-weight = input()
+weight_input = input()
+value = float(weight_input[:-2])
+unit = weight_input[-2:]
 
-# 判断输入的是千克还是磅
-if weight.endswith('kg'):
-    # 提取重量值
-    kg = float(weight[:-2])
-    # 进行千克到磅的转换
-    pd = kg * 2.2046
-    # 输出结果，保留 3 位小数
-    print(f"对应的英制重量为{pd:.3f}磅")
-elif weight.endswith('pd'):
-    # 提取重量值
-    pd = float(weight[:-2])
-    # 进行磅到千克的转换
-    kg = pd / 2.2046
-    # 输出结果，保留 3 位小数
-    print(f"对应的公制重量为{kg:.3f}公斤")
+if unit == 'kg':
+    result = value * 2.2046
+    print(f"对应的英制重量为{result:.3f}磅")
+elif unit == 'pd':
+    result = value / 2.2046
+    print(f"对应的公制重量为{result:.3f}公斤")
+else:
+    print("输入格式不正确，请输入如'10kg'或'10pd'的格式。")
